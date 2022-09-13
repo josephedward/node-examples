@@ -1,0 +1,54 @@
+<div class="jumbotron text-center">
+    <h1 class="text-center">Burger Log</h1>
+<img class="log" src="/images/burgerLog.jpg">
+     
+</div>
+<div class="container">
+    <div class="col-md-6 text-center">
+        <h2>Burgers I have Yet to Eat</h2>
+        <ul class="burgers">
+            {{#each burgers}} 
+                {{#unless this.devoured}}
+            <li>    
+                {{this.burger_name}}  
+                <form method="POST" action="/eat/{{this.id}}?_method=PUT">
+                    <input type="hidden" name="devoured" value="true">
+                    <button type="submit" name="burgerId" class="btn btn-danger center-block off-set-70">Digest It!</button>
+                </form>
+                <hr>
+            </li>
+                {{/unless}} 
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-md-6 text-center">
+        <h2>Burgers I have Eaten: </h2> 
+        {{#each burgers}} 
+            {{#if this.devoured}}
+        <ul class="devoured-burgers">
+            <li>
+                {{this.burger_name}}
+                <form method="POST" action="/eat/{{this.id}}?_method=PUT">
+                    <input type="hidden" name="devoured" value="false">
+                    <div class="row">
+                    <button type="submit" name="burgerId" class="btn btn-primary center-block off-set-70">Eat Another!</button>
+
+                    <button  method="DELETE" action="/rid/{{this.id}}?_method=DELETE" type="submit" name="burgerId" class="btn btn-black center-block off-set-70">Rid your Palette </button>
+                </div>
+                </form>
+            </li>
+            <hr>
+        </ul>
+            {{/if}} 
+        {{/each}}
+    </div>
+    <div class="col-md-12 text-center">
+         <h2>Create Your Own!</h2>
+            <form method="POST" action="/add">
+                <div class="form-group">
+                    <textarea class="form-control" name="burger_name" placeholder="Name"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>    
+            </form>
+    </div>
+</div>

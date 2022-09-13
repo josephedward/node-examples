@@ -1,0 +1,4 @@
+node_modules
+a.sh
+.env
+unused-misc/

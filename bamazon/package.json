@@ -1,0 +1,25 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "CRUD operations with node.js",
+  "main": "bamazon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handsontable": "^7.0.2",
+    "inquirer": "^6.3.1",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephedward/bamazon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/josephedward/bamazon/issues"
+  },
+  "homepage": "https://github.com/josephedward/bamazon#readme"
+}

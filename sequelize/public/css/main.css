@@ -1,0 +1,48 @@
+body {
+    background-color: pink;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+
+.log{
+    width:50%;
+}
+
+h1 {
+    font-size: 40px;
+}
+.jumbotron{
+    color: black;
+    background-color: pink;
+    
+}
+
+img{
+    size: 100%;
+}
+.intro {
+    font-size: 40px;
+    padding-top: 250px;
+    color: black;
+}
+
+.container {
+    color: black;
+    font-size: 15px;
+}
+
+.burgers,
+.devoured-burgers {
+    list-style: none;
+    text-align: left;
+}
+
+.off-set-70 {
+    margin-left: 70%;
+}
+.burger {
+    width: 8%;
+    margin: auto 0;
+    text-align: center;
+}
